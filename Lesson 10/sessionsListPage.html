@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let session = JSON.parse(localStorage.getItem('sessionList'));
+  for (let sessionListHour of session){
+    let div = document.createElement('div')
+    div.innerText = sessionListHour.toString()
+    document.body.appendChild(div)
+  }
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
