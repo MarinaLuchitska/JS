@@ -116,9 +116,9 @@ let users = [
     //     }
     //
     // }
-    for(let user of users) {
-        if (user.age > 30) {
-            console.log(user.name)
-         }
-
-    }
+    // for(let user of users) {
+    //     if (user.age > 30) {
+    //         console.log(user.name)
+    //      }
+    //
+    // }

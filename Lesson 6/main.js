@@ -57,10 +57,10 @@
 // let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
 
 
-// let str = 'Ревуть воли як ясла повні';
-//
-// let split = str.split(' ');
-// console.log(split);
+let str = 'Ревуть воли як ясла повні';
+
+let split = str.split(' ');
+console.log(split);
 
 //---------------------------------------------------------------------------------------
 
@@ -313,6 +313,17 @@ let dockerCourses = coursesArray.filter(course => course.modules.includes('docke
 
 console.log("Курси з SASS:", sassCourses);
 console.log("Курси з Docker:", dockerCourses);
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let divInfo = document.createElement('div')
+    fetch('https://dummyjson.com/carts')
+        .then(res => res.json())
+        .then(cartsObject => {
+            console.log(cartsObject)
+            const {carts} = cartsObject;
+            console.log(carts)
+                for (let cart of carts) {
+                    let div = document.createElement('div')
+                    div.classList.add('carts-obj')
+                    div.innerText =
+                        `"discountedTotal": ${cart.discountedTotal}
+                         "id":${cart.id}
+                         "total":${cart.total}
+                         "totalProducts":${cart.totalProducts}
+                         "totalQuantity":${cart.totalQuantity}
+                         "userId":${cart.userId}`
+                         for (let product of cart.products){
+                             let ul = document.createElement('ul')
+                             ul.classList.add('product-class')
+                             let li = document.createElement('li')
+                             li.innerText =
+                                 `"id": ${product.id}
+                                  "title": ${product.title}
+                                  "price": ${product.price}
+                                  "quantity": ${product.quantity}
+                                  "total": ${product.total}
+                                  "discountPercentage": ${product.discountPercentage}
+                                  "discountedTotal": ${product.discountedTotal}
+                                   `
+                             ul.appendChild(li)
+                             div.appendChild(ul)
+                         let img = document.createElement('img')
+                         img.src = product.thumbnail
+                         li.appendChild(img)
+                         }
+                    divInfo.appendChild(div)
+                }
+
+
+
+            document.body.appendChild(divInfo);
+        });
+
+
+
+
+
+</script>
+</body>
+</html>
